@@ -1,0 +1,393 @@
+/* * Media queries good down to 220px */
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(35, 89, 22);
+    background: linear-gradient(146deg, rgb(35, 89, 22) 0%, rgba(96, 168, 34, 1) 71%, rgba(0, 255, 94, 1) 100%);
+    font-family: "Rubik", sans-serif;
+}
+
+body.night {
+    background: rgb(5, 14, 3);
+    background: linear-gradient(146deg, rgba(5, 14, 3, 1) 10%, rgba(13, 34, 8, 1) 71%, rgba(5, 43, 8, 1) 95%);
+}
+
+/* ! Main wording */
+.container {
+    position: relative;
+    top: -5%;
+    left: 11%;
+    width: 70vw;
+    color: #000814;
+    font-family: "Kite One", sans-serif;
+}
+
+.container.night {
+    color: #e9edc9;
+}
+
+h1 {
+    margin: 10px 0px;
+    padding: 0;
+    font-size: 4vw;
+}
+
+h1.night {
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    text-align: left;
+    font-size: 1.7vw;
+    text-align: justify;
+}
+
+h3.night {
+    font-weight: 350;
+}
+
+/* ? Media queries for main wording */
+
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 5.7vw;
+    }
+
+    h3 {
+        font-size: 2.4vw;
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 7.2vw;
+    }
+
+    h3 {
+        font-size: 3.2vw;
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        left: 0;
+        width: 85vw;
+    }
+
+    h1 {
+        font-size: 9.8vw;
+    }
+
+    h3 {
+        font-size: 4.3vw;
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        width: 93vw;
+    }
+
+    h1 {
+        font-size: 10.7vw;
+    }
+
+    h3 {
+        font-size: 4.7vw;
+        width: 100%;
+    }
+}
+
+/* ! Night mode toggle */
+.daynight {
+    height: 25px;
+    width: 120px;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 2px black solid;
+    border-radius: 4px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.daynight p {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.daynight p.night {
+    color: #e9edc9;
+}
+
+.toggle {
+    height: 25px;
+    width: 60px;
+    background-color: #023047;
+    position: absolute;
+    transition: 0.3s;
+    left: 60px;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.toggle.night {
+    background-color: #001219;
+}
+
+.moved {
+    translate: -60px;
+}
+
+/* ? Media queries for night mode toggle */
+
+@media (max-width: 800px) {
+    .daynight {
+        width: 100px;
+        height: 20px;
+        font-size: 0.9rem;
+    }
+
+    .toggle {
+        height: 20px;
+        width: 50px;
+        left: 50px;
+    }
+
+    .moved {
+        translate: -50px;
+    }
+}
+
+/* ! External links */
+.links {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.iconcard {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 60%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 5;
+}
+
+.iconcard.night {
+    color: #e9edc9;
+}
+
+.iconcard:hover {
+    opacity: 100%;
+}
+
+.iconcard a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* ? Media queries for external links */
+
+@media (max-width: 600px) {
+    .links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ! Burger and sidebar code */
+/* ? Burger */
+.burger {
+    position: fixed;
+    left: 17px;
+    bottom: 17px;
+    height: 50px;
+    width: 50px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-bottom: 4px;
+    opacity: 70%;
+    transition: 0.4s;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+.burger:hover {
+    opacity: 100%;
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    font-size: 1.7em;
+    color: white;
+}
+
+.burger.night:hover {
+    color: #e9edc9;
+}
+
+/* ? Sidebar */
+.sidebar {
+    width: 25vw;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 60px 60px calc(100vh - 120px);
+    opacity: 70%;
+    transition: 0.75s;
+    transform: translate(-100%);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 6;
+}
+
+.sidebar.night {
+    background: rgb(5, 14, 3);
+    background: linear-gradient(146deg, rgba(5, 14, 3, 1) 40%, rgb(13, 34, 8) 80%, rgb(5, 43, 8) 95%);
+    opacity: 95%;
+    color: #e9edc9;
+}
+
+.show {
+    transform: translate(0);
+}
+
+.sidebar h1 {
+    margin: 0px;
+    grid-column: span 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #023047;
+    font-size: 1.7rem;
+}
+
+.sidebar p {
+    margin: 0px;
+    grid-column: span 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: red;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.sidebar p:hover {
+    background-color: #ccd5ae;
+}
+
+.sidebar p.night:hover {
+    background-color: #0d2208;
+}
+
+.sidebar .space {
+    grid-column: span 2;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.sidebar ul li a {
+    position: absolute;
+    height: 100%;
+    width: 105%;
+    left: -30px;
+}
+
+.sidebar ul li:hover {
+    border-left: 4px red solid;
+    background-color: lightgray;
+}
+
+.sidebar ul li.night:hover {
+    background-color: #0d2208;
+}
+
+/* ? Media queries for sidebar */
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        width: 100vw;
+        opacity: 80%;
+    }
+}
+
+/* ? Close button */
+#close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 70px;
+    width: 70px;
+}
