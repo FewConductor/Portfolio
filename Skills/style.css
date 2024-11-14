@@ -1,0 +1,1062 @@
+/* * Media queries good down to 230px */
+
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: rgb(35, 89, 22);
+    background: linear-gradient(146deg, rgba(35, 89, 22, 1) 0%, rgba(96, 168, 34, 1) 71%, rgba(0, 255, 94, 1) 100%);
+    color: #000814;
+    font-family: "Rubik", sans-serif;
+}
+
+body.night {
+    background: rgb(5, 14, 3);
+    background: linear-gradient(146deg, rgba(5, 14, 3, 1) 10%, rgba(13, 34, 8, 1) 71%, rgba(5, 43, 8, 1) 95%);
+}
+
+/* ! Title */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    margin-top: 40px;
+    font-weight: 450;
+    color: #000814;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    text-align: center;
+    left: calc(50% - 100px);
+}
+
+h1.night {
+    color: #e9edc9;
+    font-weight: 300;
+}
+
+/* ? Media queries for title */
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+}
+
+/* * Dropping down so that external links can fit above */
+@media (max-width: 400px) {
+    h1 {
+        margin-top: 55px;
+    }
+}
+
+/* ! Spider diagrams */
+section {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trunk {
+    height: 50px;
+    width: 200px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: rgb(86, 87, 120);
+    background: linear-gradient(146deg, rgba(86, 87, 120, 1) 10%, rgba(139, 144, 168, 1) 71%, rgba(167, 198, 214, 1) 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    border: black 2px solid;
+    color: #000814;
+    z-index: 4;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.shadowed {
+    box-shadow: 0 0 10px #000814;
+}
+
+/* ? Techstack icons */
+
+/* * Base icon styling */
+
+.lang {
+    color: #000814;
+    font-size: 4rem;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    z-index: 4;
+    transition: 1.5s 1.5s;
+    opacity: 0%;
+    cursor: auto;
+}
+
+.lang.night {
+    /* color: #ee9b00; */
+    /* color: #e09f3e; */
+    transition: 1s 0s;
+    color: rgb(194, 170, 135);
+    color: linear-gradient(146deg, rgba(194, 170, 135, 1) 10%, rgba(209, 195, 163, 1) 71%, rgba(255, 233, 180, 1) 95%);
+}
+
+.techstack:hover .lang {
+    transition: 2s;
+    opacity: 100%;
+}
+
+.lang p {
+    font-size: 1rem;
+    position: absolute;
+    top: 85%;
+    transition: 0.5s;
+    opacity: 0%;
+}
+
+.lang:hover p {
+    opacity: 100%;
+}
+
+.fa-database p {
+    top: 90%;
+}
+
+/* * Movement */
+
+.fa-html5 {
+    left: -80px;
+    top: -35px;
+}
+
+.techstack:hover .fa-html5 {
+    transition: 1.5s;
+    left: -120px;
+    top: -60px;
+}
+
+.htmlposition {
+    left: -120px;
+    top: -60px;
+}
+
+.fa-css3-alt {
+    left: 60px;
+    top: -90px;
+}
+
+.techstack:hover .fa-css3-alt {
+    transition: 1.5s;
+    left: 55px;
+    top: -145px;
+}
+
+.cssposition {
+    left: 55px;
+    top: -145px;
+}
+
+.fa-js {
+    left: 190px;
+    top: -50px;
+}
+
+.techstack:hover .fa-js {
+    transition: 1.5s;
+    left: 245px;
+    top: -80px;
+}
+
+.jsposition {
+    left: 245px;
+    top: -80px;
+}
+
+.fa-python {
+    left: -30px;
+    top: 50px;
+}
+
+.techstack:hover .fa-python {
+    transition: 1.5s;
+    left: -60px;
+    top: 100px;
+}
+
+.pythonposition {
+    left: -60px;
+    top: 100px;
+}
+
+.fa-database {
+    left: 155px;
+    top: 55px;
+}
+
+.techstack:hover .fa-database {
+    transition: 1.5s;
+    left: 175px;
+    top: 105px;
+}
+
+.sqlposition {
+    left: 175px;
+    top: 105px;
+}
+
+/* ? Skills icons */
+
+/* * Base icon styling */
+
+.skill {
+    position: absolute;
+    height: 45px;
+    width: 170px;
+    background: rgb(194, 170, 135);
+    background: linear-gradient(146deg, rgba(194, 170, 135, 1) 10%, rgba(209, 195, 163, 1) 71%, rgba(255, 233, 180, 1) 95%);
+    top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: #000814;
+    transition: 1.5s 1.5s;
+    opacity: 0%;
+}
+
+.skills:hover .skill {
+    transition: 1.5s;
+    opacity: 100%;
+}
+
+/* * Movement */
+
+.comms {
+    left: -50px;
+    top: -65px;
+}
+
+.skills:hover .comms {
+    transition: 1.5s;
+    left: -75px;
+    top: -105px;
+}
+
+.commsposition {
+    left: -75px;
+    top: -105px;
+}
+
+.mgt {
+    left: 125px;
+    top: -55px;
+}
+
+.skills:hover .mgt {
+    transition: 1.5s;
+    left: 145px;
+    top: -90px;
+}
+
+.mgtposition {
+    left: 145px;
+    top: -90px;
+}
+
+.det {
+    left: 110px;
+    top: 55px;
+}
+
+.skills:hover .det {
+    transition: 1.5s;
+    left: 150px;
+    top: 90px;
+}
+
+.detposition {
+    left: 150px;
+    top: 90px;
+}
+
+.coll {
+    left: -45px;
+    top: 65px;
+}
+
+.skills:hover .coll {
+    transition: 1.5s;
+    left: -75px;
+    top: 115px;
+}
+
+.collposition {
+    left: -75px;
+    top: 115px;
+}
+
+.lrn {
+    left: -145px;
+    top: 0;
+}
+
+.skills:hover .lrn {
+    transition: 1.5s;
+    left: -220px;
+    top: 6px;
+}
+
+.lrnposition {
+    left: -220px;
+    top: 6px;
+}
+
+/* * Evidence paragraphs */
+
+.skill p {
+    transition: 0.75s;
+    opacity: 0%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    background: rgb(0, 8, 20);
+    background: linear-gradient(146deg, rgba(0, 8, 20, 1) 10%, rgba(7, 26, 56, 1) 71%, rgba(20, 66, 134, 1) 95%);
+    color: #f8f8f8;
+    border: solid black 2px;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 0.9rem;
+    text-align: justify;
+    margin: 0;
+    z-index: 5;
+}
+
+.skill p.night {
+    color: #e9edc9;
+}
+
+.skill p .skillpheader {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.solidify {
+    opacity: 100%;
+}
+
+.skillptext {
+    opacity: 0%;
+}
+
+p.solidify {
+    opacity: 100%;
+    height: 250px;
+    width: 250px;
+}
+
+p.solidify .skillptext {
+    opacity: 100%;
+    transition: 0.75s 0.75s;
+}
+
+/* ? Media queries for spider diagrams */
+
+/* * When one spider selected, it moves to the centre and the other disappears */
+@media (max-width: 1020px) {
+    .trunk {
+        top: 20px;
+    }
+
+    .techstack .lang {
+        display: none !important;
+    }
+
+    .techstack .lang.solidify {
+        display: flex !important;
+    }
+
+    .skills .skill {
+        display: none;
+    }
+
+    .skills .skill.solidify {
+        display: flex;
+    }
+
+    .techstack.shadowed {
+        translate: 25vw;
+        transition: 1s;
+    }
+
+    .skills.shadowed {
+        translate: -25vw;
+    }
+
+    .vanished {
+        display: none;
+        transition: 1s;
+    }
+}
+
+@media (max-width: 750px) {
+    .skills:hover .lrn {
+        transition: 1.5s;
+        left: -190px;
+        top: 6px;
+    }
+
+    .lrnposition {
+        left: -190px;
+        top: 6px;
+    }
+
+    .lang p {
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .lrn p {
+        left: -2px;
+    }
+
+    .mgt p,
+    .det p {
+        right: -2px;
+    }
+}
+
+/* * Everything shrinks */
+@media (max-width: 600px) {
+    .skill p {
+        font-size: 0.8rem;
+    }
+
+    p.solidify {
+        width: 200px;
+    }
+
+    .skill p .skillpheader {
+        font-size: 1rem;
+    }
+
+    .skill {
+        height: 40px;
+        width: 120px;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .trunk {
+        height: 45px;
+        width: 150px;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .lang {
+        translate: -15px;
+    }
+}
+
+/* * Change to have icons as list, rather than spider diagram */
+@media (max-width: 550px) {
+    .techstack.shadowed {
+        position: absolute;
+        top: 90px;
+        left: 70px;
+        transition: 0s;
+        translate: none;
+    }
+
+    .fa-html5 {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .techstack:hover .fa-html5 {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .htmlposition {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .fa-css3-alt {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .techstack:hover .fa-css3-alt {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .cssposition {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .fa-js {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .techstack:hover .fa-js {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .jsposition {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .fa-python {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .techstack:hover .fa-python {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .pythonposition {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .fa-database {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .techstack:hover .fa-database {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .sqlposition {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .lang p {
+        font-size: 1rem;
+        position: absolute;
+        top: 10%;
+        left: 100%;
+        opacity: 100%;
+    }
+
+    .fa-database p {
+        top: 10%;
+    }
+
+    .techstack {
+        transition: 0s;
+    }
+
+    .skills.shadowed {
+        position: absolute;
+        top: 90px;
+        left: 70px;
+        transition: 0s;
+        translate: none;
+    }
+
+    .skills {
+        transition: 0s;
+    }
+
+    .comms {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .skills:hover .comms {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .commsposition {
+        left: 10vw;
+        top: 80px;
+    }
+
+    .mgt {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .skills:hover .mgt {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .mgtposition {
+        left: 10vw;
+        top: 160px;
+    }
+
+    .det {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .skills:hover .det {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .detposition {
+        left: 10vw;
+        top: 240px;
+    }
+
+    .coll {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .skills:hover .coll {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .collposition {
+        left: 10vw;
+        top: 320px;
+    }
+
+    .lrn {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .skills:hover .lrn {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .lrnposition {
+        left: 10vw;
+        top: 400px;
+    }
+
+    .skill p {
+        left: calc(50% - 33px);
+    }
+
+    p.solidify {
+        left: -100px;
+        width: 350px;
+        height: 150px;
+    }
+}
+
+/* * Unselected, trunk icons are one above the other, rather than next to each other */
+/* * When selected, list is now centralised rather than offset */
+@media (max-width: 450px) {
+    body {
+        flex-direction: column;
+        padding: 100px 0;
+        height: calc(100vh - 200px);
+    }
+
+    .techspider,
+    .skillspider {
+        width: 100%;
+        height: 50%;
+        flex-grow: 1;
+    }
+
+    .trunk {
+        top: 0;
+    }
+
+    .trunk.shadowed {
+        left: calc(50vw - 75px);
+    }
+
+    .lang.solidify {
+        left: 3vw;
+    }
+
+    .techstack:hover .lang.solidify {
+        left: 3vw;
+    }
+
+    .skill.solidify {
+        left: calc(50% - 62px);
+    }
+
+    .skills:hover .skill.solidify {
+        left: calc(50% - 62px);
+    }
+
+    .skill p {
+        padding: 5px;
+        top: -50px;
+        left: calc(50vw - 32px);
+        font-size: 1rem;
+        position: fixed;
+    }
+
+    .skill p .skillpheader {
+        font-size: 1.2rem;
+    }
+
+    p.solidify {
+        width: calc(200px - 14px);
+        height: 410px;
+        position: fixed;
+        top: 135px;
+        left: calc(50vw - 100px);
+    }
+}
+
+/* * Dropping list down so that it does not overlap with title (which is dropped at this point to allow the external links to fit above it */
+@media (max-width: 400px) {
+    .trunk.shadowed {
+        top: 100px;
+    }
+}
+
+/* ! Night mode toggle */
+.daynight {
+    height: 25px;
+    width: 120px;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 2px black solid;
+    border-radius: 4px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.daynight p {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.daynight p.night {
+    color: #e9edc9;
+}
+
+.toggle {
+    height: 25px;
+    width: 60px;
+    background-color: #023047;
+    position: absolute;
+    transition: 0.3s;
+    left: 60px;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.toggle.night {
+    background-color: #001219;
+}
+
+.moved {
+    translate: -60px;
+}
+
+/* ? Media queries for night mode toggle */
+@media (max-width: 800px) {
+    .daynight {
+        width: 100px;
+        height: 20px;
+        font-size: 0.9rem;
+    }
+
+    .toggle {
+        height: 20px;
+        width: 50px;
+        left: 50px;
+    }
+
+    .moved {
+        translate: -50px;
+    }
+}
+
+/* ! External links */
+.links {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.iconcard {
+    height: 45px;
+    width: 45px;
+    /* background-color: white; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 60%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 5;
+}
+
+.iconcard.night {
+    color: #e9edc9;
+}
+
+.iconcard:hover {
+    opacity: 100%;
+}
+
+.iconcard a {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* ? Media queries for external links */
+
+/* * Moving to horizontal */
+@media (max-width: 1200px) {
+    .links {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+/* * Splitting icons to either side of title */
+@media (max-width: 650px) {
+    .links {
+        width: calc(100vw - 30px);
+        grid-template-columns: 45px 45px auto 45px;
+    }
+
+    .iconcard {
+        justify-self: right;
+    }
+}
+
+@media (max-width: 400px) {
+    .links {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .iconcard {
+        justify-self: center;
+    }
+}
+
+/* ! Burger and sidebar code */
+/* ? Burger */
+.burger {
+    position: fixed;
+    left: 17px;
+    bottom: 17px;
+    height: 50px;
+    width: 50px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-bottom: 4px;
+    opacity: 70%;
+    transition: 0.4s;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+.burger:hover {
+    opacity: 100%;
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    font-size: 1.7em;
+    color: white;
+}
+
+.burger.night:hover {
+    color: #e9edc9;
+}
+
+/* ? Media query for burger to make it more seethrough when overlapping main content */
+@media (max-width: 450px) {
+    .burger {
+        opacity: 20%;
+    }
+}
+
+/* ? Sidebar */
+.sidebar {
+    width: 25vw;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-rows: 60px 60px calc(100vh - 120px);
+    opacity: 70%;
+    transition: 0.75s;
+    transform: translate(-100%);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 6;
+}
+
+.sidebar.night {
+    background: rgb(5, 14, 3);
+    background: linear-gradient(146deg, rgba(5, 14, 3, 1) 40%, rgb(13, 34, 8) 80%, rgb(5, 43, 8) 95%);
+    opacity: 95%;
+    color: #e9edc9;
+}
+
+.show {
+    transform: translate(0);
+}
+
+.sidebar h1 {
+    margin: 0px;
+    grid-column: span 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #023047;
+    font-size: 1.7rem;
+}
+
+.sidebar p {
+    margin: 0px;
+    grid-column: span 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: red;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.sidebar p:hover {
+    background-color: lightgray;
+}
+
+.sidebar p.night:hover {
+    background-color: #0d2208;
+}
+
+.sidebar .space {
+    grid-column: span 2;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.sidebar ul li a {
+    position: absolute;
+    height: 100%;
+    width: 105%;
+    left: -30px;
+}
+
+.sidebar ul li:hover {
+    border-left: 4px red solid;
+    background-color: lightgray;
+}
+
+.sidebar ul li.night:hover {
+    background-color: #0d2208;
+}
+
+/* ? Media queries for sidebar */
+
+@media (max-width: 800px) {
+    .sidebar {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        width: 100vw;
+        opacity: 80%;
+    }
+}
+
+/* ? Close button */
+#close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 70px;
+    width: 70px;
+}
