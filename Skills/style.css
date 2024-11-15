@@ -62,7 +62,7 @@ h1.night {
 /* * Dropping down so that external links can fit above */
 @media (max-width: 400px) {
     h1 {
-        margin-top: 55px;
+        margin-top: 65px;
     }
 }
 
@@ -115,8 +115,6 @@ section {
 }
 
 .lang.night {
-    /* color: #ee9b00; */
-    /* color: #e09f3e; */
     transition: 1s 0s;
     color: rgb(194, 170, 135);
     color: linear-gradient(146deg, rgba(194, 170, 135, 1) 10%, rgba(209, 195, 163, 1) 71%, rgba(255, 233, 180, 1) 95%);
@@ -737,7 +735,7 @@ p.solidify .skillptext {
         width: calc(200px - 14px);
         height: 410px;
         position: fixed;
-        top: 135px;
+        top: 120px;
         left: calc(50vw - 100px);
     }
 }
@@ -745,7 +743,7 @@ p.solidify .skillptext {
 /* * Dropping list down so that it does not overlap with title (which is dropped at this point to allow the external links to fit above it */
 @media (max-width: 400px) {
     .trunk.shadowed {
-        top: 100px;
+        top: 110px;
     }
 }
 
@@ -872,6 +870,12 @@ p.solidify .skillptext {
 
     .iconcard {
         justify-self: right;
+    }
+}
+
+@media (max-width: 425px) {
+    .iconcard {
+        transform: scale(0.8);
     }
 }
 
