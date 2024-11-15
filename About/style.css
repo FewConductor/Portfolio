@@ -141,7 +141,7 @@ h4.night {
 @media (max-width: 400px) {
     h1 {
         width: 100vw;
-        margin-top: 55px;
+        margin-top: 65px;
         height: calc(90px - 55px);
     }
 }
@@ -275,6 +275,12 @@ h4.night {
 
     .iconcard {
         justify-self: right;
+    }
+}
+
+@media (max-width: 425px) {
+    .iconcard {
+        transform: scale(0.8);
     }
 }
 
